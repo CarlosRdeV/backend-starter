@@ -42,6 +42,7 @@ docker run -p 8080:8080 backend-starter
 Una vez levantado el proyecto, accede a la documentación Swagger en:
 
 http://localhost:8080/swagger-ui/index.html
+
 ✅ Pendientes
  Integrar API externa de prueba (para pruebas IA)
 
@@ -53,4 +54,5 @@ http://localhost:8080/swagger-ui/index.html
 Este proyecto forma parte de un roadmap personal de exploración backend, abarcando inteligencia artificial, despliegue cloud y prácticas de seguridad.
 
 Carlos Adrián Rivera Rodríguez – LinkedIn
+
 https://www.linkedin.com/in/carlosrdev/
