@@ -1,58 +1,63 @@
 # 🧱 backend-starter
+Proyecto base para microservicios con Spring Boot 3, configurado para servir como plantilla para nuevos proyectos backend modernos.
 
-Proyecto base para microservicios con Spring Boot, diseñado como plantilla para pruebas de integración con IA, despliegue en la nube y seguridad aplicada.
+---
 
-## 🚀 Características
+## 🔧 Stack Tecnológico
 
-- Arquitectura limpia por capas (Controller, Service, Repository)
-- Documentación automática con Swagger (OpenAPI)
-- Soporte para Docker
-- Configuración con `application.properties`
-- Logging estructurado con SLF4J
-- Base de datos desacoplada (PostgreSQL configurado opcionalmente)
+- ☕ Java 17
+- 🚀 Spring Boot 3.4.4
+- 🧱 Spring Web
+- 🔐 Spring Security (permitAll por defecto)
+- 📝 Swagger / OpenAPI
+- 🐳 Docker-ready
+- ✅ Validación con `@Valid`
+- ⚙️ Estructura por capas
+- 🧠 Preparado para integración con IA, Cloud y DevSecOps
 
-## 📁 Estructura
+---
 
-src 
-├── main │ 
- ├── java │ 
-  │ └── com │ 
-   │ └── carlosrdev │  
-     ├── controller │ 
-     ├── service │ │
-     ├── repository │ 
-     └── model │ 
-     └── resources │ 
-     ├── application.properties 
-     │ └── static
+## 🚀 Ejecutar el proyecto
 
+### 🧪 En local
 
-## 🐳 Cómo levantar con Docker
+./mvnw spring-boot:run
 
-1. Construir el `.jar`:
-./mvnw clean package
-Construir la imagen Docker:
+🐳 Con Docker
 
+./mvnw clean package -DskipTests
 docker build -t backend-starter .
-Ejecutar:
-
 docker run -p 8080:8080 backend-starter
 
-🔍 Documentación API
-Una vez levantado el proyecto, accede a la documentación Swagger en:
+📚 Documentación Swagger
+Una vez levantado:
 
 http://localhost:8080/swagger-ui/index.html
 
-✅ Pendientes
- Integrar API externa de prueba (para pruebas IA)
+📂 Estructura del proyecto
 
- Añadir seguridad básica con JWT
+src/
+├── main/
+│   ├── java/com/carlosrdev/backendstarter/
+│   │   ├── config/           # Configuraciones globales (ej. seguridad)
+│   │   ├── controller/       # Endpoints REST
+│   │   ├── model/            # DTOs o entidades
+│   │   ├── repository/       # Repositorios (cuando se usen)
+│   │   ├── service/          # Lógica de negocio
+│   │   └── BackendStarterApplication.java
+│   └── resources/
+│       └── application.yml
 
- Configurar CI/CD en GitHub Actions
+🔐 Seguridad
+Por ahora, todos los endpoints están abiertos (permitAll).
+La clase SecurityConfig está lista para añadir autenticación más adelante (JWT, roles, etc.).
 
-🧠 Notas
-Este proyecto forma parte de un roadmap personal de exploración backend, abarcando inteligencia artificial, despliegue cloud y prácticas de seguridad.
+🔥 ¿Para qué sirve?
+Este proyecto forma parte de un roadmap técnico personal enfocado en la especialización backend:
+➡️ Backend moderno,
+➡️ Integración con IA,
+➡️ Cloud automation,
+➡️ DevSecOps progresivo.
 
-Carlos Adrián Rivera Rodríguez – LinkedIn
-
+Desarrollado por Carlos Adrián Rivera Rodríguez
 https://www.linkedin.com/in/carlosrdev/
